@@ -1,0 +1,10 @@
+name: build info
+on: push
+jobs:
+  build_info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+      - name: use local action
+        uses: ./.github/actions/build-info

@@ -1,0 +1,11 @@
+name: build-info
+description: print branch, commit and python version
+runs:
+  using: composite
+  steps:
+    - run: echo "Branch is $GITHUB_REF_NAME"
+      shell: bash
+    - run: echo "Commit sha is $GITHUB_SHA"
+      shell: bash
+    - run: python3 --version
+      shell: bash
